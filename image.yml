@@ -10,6 +10,14 @@ upstream:
     type: json
     url: https://api.github.com/repos/luanti-org/luanti/releases
     jq: first(.[] | select(.tag_name | contains("android") | not)) | .tag_name
+  notes:
+    type: github_release
+    repo: luanti-org/luanti
+  sponsor:
+  - name: Luanti
+    url: https://www.luanti.org/donate/
+  - name: Luanti (Open Collective)
+    url: https://opencollective.com/luanti
 
 release:
   branch: main
